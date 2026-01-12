@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta property="og:image" content="https://i.imgur.com/GySNJ38.jpeg">
+<meta property="og:title" content="Invitación de Boda | Yahir & Amisadai">
+<meta property="og:description" content="Acompáñanos a celebrar nuestra boda">
+<meta property="og:type" content="website">
+
+<title>Yahir & Amisadai | Invitación</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Great+Vibes&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --verde:#0f5132;
+  --dorado:#e6d5a7;
+}
+
+body{
+  margin:0;
+  font-family:'Playfair Display', serif;
+  background:#ffffff;
+  color:#000;
+}
+
+/* HEADER */
+header{
+  background:linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), var(--verde);
+  color:white;
+  text-align:center;
+  padding:70px 20px;
+}
+header h1{
+  font-family:'Great Vibes', cursive;
+  font-size:62px;
+  margin:0;
+  color:var(--dorado);
+}
+header p{
+  font-size:17px;
+  letter-spacing:2px;
+}
+
+/* SECCIONES */
+section{
+  padding:38px 20px;
+  max-width:900px;
+  margin:auto;
+  text-align:center;
+}
+
+h2{
+  color:var(--verde);
+  margin-bottom:10px;
+}
+
+h3{
+  color:var(--verde);
+  margin-bottom:8px;
+  font-weight:600;
+}
+
+/* DIVISOR */
+.divider{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  margin:14px 0 20px;
+}
+.divider::before,
+.divider::after{
+  content:"";
+  width:60px;
+  height:2px;
+  background:var(--dorado);
+}
+.divider span{
+  color:var(--dorado);
+  font-size:18px;
+}
+
+/* CONTADOR */
+.countdown{
+  display:flex;
+  justify-content:center;
+  gap:8px;
+}
+.countdown div{
+  background:var(--verde);
+  color:var(--dorado);
+  padding:8px 10px;
+  border-radius:8px;
+  min-width:58px;
+  font-size:13px;
+}
+
+/* BOTONES */
+a.button{
+  display:inline-block;
+  margin-top:12px;
+  padding:10px 26px;
+  background:var(--verde);
+  color:white;
+  text-decoration:none;
+  border-radius:30px;
+  font-size:14px;
+}
+
+/* GALERÍA */
+.gallery img{
+  width:100%;
+  max-width:420px;
+  border-radius:18px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.25);
+}
+
+/* ITINERARIO */
+.itinerario{
+  max-width:420px;
+  margin:auto;
+  text-align:left;
+}
+.evento{
+  display:flex;
+  gap:16px;
+  padding:12px 0;
+  border-bottom:1px dashed var(--dorado);
+}
+.icono{
+  font-size:24px;
+  color:var(--verde);
+}
+
+/* ===== PADRES (SOLO ESTO NUEVO) ===== */
+.padres{
+  display:flex;
+  justify-content:space-between;
+  gap:40px;
+  margin-top:10px;
+  font-size:16px;
+}
+.padres div{
+  flex:1;
+}
+.padres p{
+  margin:4px 0;
+  font-weight:500;
+}
+
+/* RESPONSIVE */
+@media(max-width:700px){
+  .padres{
+    flex-direction:column;
+    gap:20px;
+  }
+}
+
+/* MESA DE REGALOS */
+.mesa-regalos{
+  padding:30px 20px;
+}
+.mesa-regalos .icono-sobre{
+  font-size:32px;
+  color:var(--dorado);
+  margin-bottom:8px;
+}
+.mesa-regalos p{
+  font-size:15px;
+  line-height:1.5;
+  max-width:600px;
+  margin:0 auto;
+}
+
+/* VERSÍCULO */
+.versiculo{
+  max-width:700px;
+  margin:10px auto 30px;
+  font-size:15px;
+  font-style:italic;
+  line-height:1.7;
+  color:#333;
+}
+.versiculo strong{
+  display:block;
+  margin-bottom:12px;
+  color:var(--verde);
+}
+
+/* FOOTER */
+footer{
+  background:black;
+  color:white;
+  text-align:center;
+  padding:30px 20px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <p>NOS COMPLACE INVITARTE A NUESTRA BODA</p>
+  <h1>Yahir & Amisadai</h1>
+</header>
+
+<section>
+  <h2>La Ceremonia</h2>
+  <div class="divider"><span>✦</span></div>
+  <p><strong>17 de julio de 2026</strong></p>
+  <p>5:00 pm</p>
+  <div class="countdown" id="countdown"></div>
+</section>
+
+<!-- SECCIÓN AJUSTADA -->
+<section>
+  <h2>Con la bendición de los padres</h2>
+  <div class="divider"><span>✦</span></div>
+
+  <div class="padres">
+    <div>
+      <h3>Padres del novio</h3>
+      <p>Jaime Armando Romo Ramírez</p>
+      <p>Mayra Celene Puebla Rodríguez</p>
+    </div>
+
+    <div>
+      <h3>Padres de la novia</h3>
+      <p>Uziel Sánchez Cruz</p>
+      <p>Verónica Victoria Barrita García</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Ubicación</h2>
+  <div class="divider"><span>✦</span></div>
+  <p>
+    Cam. Tioosba 104, San Antonio 7ma Secc,<br>
+    68270 Tlalixtac de Cabrera, Oax.
+  </p>
+  <a class="button" target="_blank"
+     href="https://www.google.com/maps/search/?api=1&query=Cam.+Tioosba+104,+Tlalixtac+de+Cabrera,+Oaxaca">
+     Ver en Google Maps
+  </a>
+</section>
+
+<section>
+  <h2>Galería</h2>
+  <div class="divider"><span>✦</span></div>
+  <div class="gallery">
+    <img src="galeria.jpg" alt="Galería">
+  </div>
+</section>
+
+<section>
+  <h2>Itinerario</h2>
+  <div class="divider"><span>✦</span></div>
+
+  <div class="itinerario">
+    <div class="evento"><div class="icono">🎉</div><div><strong>Recepción</strong><br>5:00</div></div>
+    <div class="evento"><div class="icono">⛪</div><div><strong>Ceremonia</strong><br>5:30</div></div>
+    <div class="evento"><div class="icono">🍽️</div><div><strong>Comida</strong><br>6:30</div></div>
+  </div>
+</section>
+
+<section class="mesa-regalos">
+  <h2>Mesa de regalos</h2>
+  <div class="divider"><span>✦</span></div>
+  <div class="icono-sobre">✉︎</div>
+  <p>
+    Nos emociona mucho iniciar este nuevo capítulo en nuestras vidas y, debido a
+    nuestra mudanza, agradeceríamos mucho puedan hacerlo a través de un sobre.
+    Habrá una caja de regalos y buenos deseos disponible durante el evento.
+  </p>
+</section>
+
+<section>
+  <h2>Confirmación</h2>
+  <div class="divider"><span>✦</span></div>
+
+  <a class="button" target="_blank" id="wa1">Confirmar al 951 466 9139</a><br><br>
+  <a class="button" target="_blank" id="wa2">Confirmar al 449 203 4743</a><br><br>
+
+  <a class="button" target="_blank"
+     href="https://www.youtube.com/watch?v=0Qp8XzYp7Gc">
+     🎶 Escuchar nuestra canción
+  </a>
+
+  <p style="margin-top:14px;font-weight:bold;color:var(--verde);">
+    Confirma antes del 26 de Abril
+  </p>
+</section>
+
+<section class="versiculo">
+  <strong>Cantares 8:6 (RVR 1960)</strong>
+  Ponme como un sello sobre tu corazón,<br>
+  como una marca sobre tu brazo;<br><br>
+  porque fuerte es como la muerte el amor;<br>
+  duros como el Seol los celos;<br><br>
+  sus brasas, brasas de fuego,<br>
+  fuerte llama.
+</section>
+
+<footer>
+  <p>Con amor, esperamos compartir este día contigo</p>
+  <p>Yahir & Amisadai</p>
+</footer>
+
+<script>
+const mensaje="Confirmo mi asistencia a la boda de Yahir y Amisadai.";
+wa1.href=`https://wa.me/529514669139?text=${encodeURIComponent(mensaje)}`;
+wa2.href=`https://wa.me/524492034743?text=${encodeURIComponent(mensaje)}`;
+
+const cd=document.getElementById("countdown");
+const date=new Date("July 17, 2026 17:00:00").getTime();
+setInterval(()=>{
+  const n=new Date().getTime();
+  const d=date-n;
+  if(d>0){
+    cd.innerHTML=
+    `<div>${Math.floor(d/86400000)}<br>Días</div>
+     <div>${Math.floor(d/3600000)%24}<br>Hrs</div>
+     <div>${Math.floor(d/60000)%60}<br>Min</div>
+     <div>${Math.floor(d/1000)%60}<br>Seg</div>`;
+  }
+},1000);
+</script>
+
+</body>
+</html>
+
